@@ -153,6 +153,7 @@
           index = i ;
         }
       });
+      index--;
       next =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
@@ -160,14 +161,14 @@
     },
     nextImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+      $("img.gallery-item").each(function() {                                         // Définit l'image sur laquelle j'ai cliqué
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");           // Récupère la catégorie choisie
       let imagesCollection = [];
-      if (activeTag === "all") {
+      if (activeTag === "all") {                                                      // Puis dresse la liste d'images de la gallerie en fonction
         $(".item-column").each(function() {
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
@@ -184,7 +185,8 @@
           }
         });
       }
-      let index = 0,
+
+      let index = 0,                                                                   // On définit des valeurs pour passer d'une image à l'autre
         next = null;
 
       $(imagesCollection).each(function(i) {
@@ -192,8 +194,12 @@
           index = i;
         }
       });
+      index++;
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
+      
+
+
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -240,6 +246,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
+      $(this).addClass("active");
       $(this).addClass("active-tag");
 
       var tag = $(this).data("images-toggle");
