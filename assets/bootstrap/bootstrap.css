@@ -6056,8 +6056,9 @@ textarea.form-control-lg {
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  opacity: 0.2;
   transition: opacity 0.15s ease;
+  background-color: #000;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
@@ -6085,12 +6086,12 @@ textarea.form-control-lg {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
-  background-color: #000;
+  border-radius: 30px;
 }
 
 /* rtl:options: {
