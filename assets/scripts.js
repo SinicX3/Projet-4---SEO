@@ -24,11 +24,11 @@ function Coords () {
     div.appendChild(div_title);
   
     const ul = Object.assign(document.createElement("ul"), {itemtype:"https://schema.org/LocalBusiness"});
-    ul.setAttribute("itemscope","");
-    const li1 = Object.assign(document.createElement("li"), {innerHTML:"<li><span itemprop=`name`>Nina Carducci</span></li>"});
-    const li2 = Object.assign(document.createElement("li"), {innerHTML:"<li>Adresse : <span itemprop=`address`>68 avenue Alsace-Lorraine, 33200 Bordeaux</span>.</li>"});
-    const li3 = Object.assign(document.createElement("li"), {innerHTML:"<li>Téléphone : <span itemprop=`telephone`>05 56 67 78 89</span>.</li>"});
-    const li4 = Object.assign(document.createElement("li"), {innerHTML:"<li>Je réponds au téléphone <span itemprop=`openingHours` datetime=`Monday through Friday, 10:00-19:00`>du lundi au vendredi de 10 h à 19 h</span>.</li>"});
+    ul.setAttribute("itemscope", "");
+    const li1 = Object.assign(document.createElement("li"), {innerHTML:"<span itemprop=`name`>Nina Carducci</span>"});
+    const li2 = Object.assign(document.createElement("li"), {innerHTML:"Adresse : <span itemprop=`address`>68 avenue Alsace-Lorraine, 33200 Bordeaux</span>."});
+    const li3 = Object.assign(document.createElement("li"), {innerHTML:"Téléphone : <span itemprop=`telephone`>05 56 67 78 89</span>."});
+    const li4 = Object.assign(document.createElement("li"), {innerHTML:"Je réponds au téléphone <span itemprop=`openingHours` datetime=`Monday through Friday, 10:00-19:00`>du lundi au vendredi de 10 h à 19 h</span>."});
 
     [li1, li2, li3, li4].forEach((e) => ul.appendChild(e));
     div_ul.appendChild(ul);
